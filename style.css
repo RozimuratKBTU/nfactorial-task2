@@ -1,22 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins',sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-i,svg{
+i,svg {
     pointer-events: none;
 }
 
 /**Color Palette */
-
-.colors{
+.colors {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -24,7 +23,7 @@ i,svg{
     height: 80%;
 }
 
-.color{
+.color {
     position: relative;
     height: 80vh;
     display: flex;
@@ -33,87 +32,67 @@ i,svg{
     align-items: center;
     justify-content: space-evenly;
     overflow: hidden;
+    /* margin: 1rem 3.4rem; */
 }
 
-.color h2{
+.color h2 {
     font-size: 2.2rem;
-    color: white;
+    color: #f6f6f6;
 }
 
-.controls{
+.controls {
     display: flex;
     flex-direction: column;
 }
 
-
 /** Control Buttons */
-
-.lock-btn{
+.adjust-btn,
+.lock-btn {
     font-size: 2rem;
     cursor: pointer;
     margin: 2rem 0rem;
-    /*padding: 2rem;*/
     background: none;
-    border:none;
-    transition: all 0.5s ease-in-out;
-
-}
-
-.adjust-btn{
-    font-size: 2rem;
-    cursor: pointer;
-    margin: 2rem 0rem;
-    /*padding: 2rem;*/
-    background: none;
-    border:none;
+    border: none;
     transition: all 0.5s ease-in-out;
 }
-
 
 .adjust-btn:hover,
 .lock-btn:hover {
     color: rgb(72, 77, 146);
-
 }
 
-/*color sliders*/
-
-.sliders{
+/** Color Sliders */
+.sliders {
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 0%;
-    background: white;
+    background: #fff;
     padding: 1rem;
     width: 80%;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     pointer-events: none;
     opacity: 0;
-
-    /*for the transition*/
-
+    /** For the transition */
     transform: translateY(100px);
     transition: all 0.5s ease-in-out;
-
 }
 
-
-
-.sliders.active{
+.sliders.active {
     pointer-events: all;
     transform: translateY(0px);
     opacity: 1;
 }
 
-.sliders span{
+.sliders span {
     font-size: 1rem;
     text-align: start;
     font-weight: bold;
 }
 
-.sliders input[type="range"]{
-    -webkit-appearance: button;
+.sliders input[type="range"] {
+    -webkit-appearance: none;
     width: 100%;
     margin: 1rem 0rem;
     position: relative;
@@ -135,12 +114,13 @@ i,svg{
     font-weight: bold;
 }
 
-.close-sliders:hover{
-    color: white;
-    background: black;
+.close-sliders:hover {
+    color: #f4f4f4;
+    background: #080404;
+    /* font-weight: 800; */
 }
-/** Panel */
 
+/** Panel */
 .panel {
     display: flex;
     align-items: center;
@@ -164,19 +144,16 @@ i,svg{
     color: rgb(31, 33, 63);
 }
 
-
-
 .panel p {
     text-align: center;
     font-size: 1.3rem;
     padding: 0.6rem 0;
 }
 
-/** Copy, Save, Library */
-
+/** Copy, Save & Library */
 .copy-container,
 .save-container,
-.library-container{
+.library-container {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -187,7 +164,7 @@ i,svg{
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    /*transform*/
+    /** For Transition */
     opacity: 0;
     transition: all 0.7s ease;
 }
@@ -219,7 +196,6 @@ i,svg{
     transform: translateY(0rem);
 }
 
-
 .copy-popup h4,
 .save-popup h4,
 .library-popup h4 {
@@ -227,6 +203,7 @@ i,svg{
     padding: 1rem;
 }
 
+/** Close buttons for Save & Library popups */
 .close-save,
 .close-library {
     position: absolute;
@@ -250,7 +227,6 @@ i,svg{
 }
 
 /** Input for Save Popup */
-
 .save-input {
     width: 70%;
     height: 100%;
@@ -273,10 +249,21 @@ i,svg{
     transition: all 0.5s ease-in-out;
 }
 
-
 .submit-save:hover {
     background: rgb(24, 24, 24);
     color: #fff;
+}
+
+/** Library popup individual style */
+.library-popup {
+    min-width: 40%;
+    padding: 1rem;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    max-height: 50vh;
+    border-top-left-radius: 1rem !important;
+    border-bottom-left-radius: 1rem !important;
+    position: relative;
 }
 
 .palette-container {
@@ -284,7 +271,6 @@ i,svg{
     opacity: 1;
     margin: 3rem 0rem;
 }
-
 
 .custom-palette{
     display: flex;
@@ -294,7 +280,6 @@ i,svg{
     padding: 0rem;
     margin: 1.5rem 0rem;
 }
-
 
 .small-preview {
     display: flex;
@@ -309,7 +294,6 @@ i,svg{
     height: 5rem;
     flex: 1;
 }
-
 
 /** Another style for the buttons */
 .clear-library {
@@ -329,7 +313,6 @@ i,svg{
     left: 80%;
 }
 
-
 .clear-library:hover{
     background: rgb(0, 0, 0);
     color: #fff;
@@ -345,19 +328,34 @@ i,svg{
     background-color: rgb(41, 41, 41);
     color: #fff;
 }
-
 .pick-palette-btn:hover {
     background-color: rgb(114, 107, 107);
     color: #000;
     font-weight: bold;
 }
 
+/* .delete-palette-btn {
+    height: 5rem;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2rem;
+    background-color: rgb(139, 139, 139); 
+    color: #fff;
+} */
+
+/* .delete-palette-btn:hover {
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+} */
+
+/** Media Query */
 @media only screen and (max-width: 600px) {
-    .color{
-        min-height: 100%;
+    .color {
+        min-width: 100%;
     }
 
-    .colors{
+    .colors {
         flex-direction: column;
         min-width: 100%;
     }
@@ -365,6 +363,12 @@ i,svg{
     .sliders {
         width: 60%;
         padding: 0.8rem;
+    }
+
+    .sliders input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 0.7rem 0rem;
     }
 
     .close-sliders {
@@ -379,12 +383,10 @@ i,svg{
         min-height: 100%;
     }
 
-
     .library-popup {
         overflow-x: scroll;
 
     }
-
 
     .close-save,
     .close-library {
@@ -402,7 +404,6 @@ i,svg{
         right: -57%;
     }
 
-
     .clear-library {
         padding: 0.6rem 0.7rem;
         margin: 0rem 0.7rem;
@@ -411,14 +412,11 @@ i,svg{
         top: 18%;
         left: 130%;
     }
-
-
     .palette-container {
         min-width: 100%;
         opacity: 1;
         margin: 4rem 5.8rem;
     }
-
 
     .custom-palette{
         display: flex;
@@ -429,32 +427,14 @@ i,svg{
         margin: 1.5rem 0rem;
     }
 
-
-
     .pick-palette-btn {
         height: 5rem;
         padding: 0.9rem;
         font-size: 0.9rem;
     }
-
     .pick-palette-btn {
         height: 5rem;
         padding: 0.9rem;
         font-size: 0.9rem;
     }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
