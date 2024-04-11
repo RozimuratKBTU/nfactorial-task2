@@ -13,6 +13,9 @@ Create additional schemes: Users can create additional or similar color schemes 
 
 Saving and Sharing Palettes: User-created color palettes can be saved and shared with other users.
 
+# Setup Instructions:
+I deployed the application to vercel, you can see it by clicking [here](https://nfactorial-task2.vercel.app/).
+To run it locally, just clone the repository and open the index.html file.
 
-[haha](https://nfactorial-task2.vercel.app/)
+
 
