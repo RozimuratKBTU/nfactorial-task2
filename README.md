@@ -15,6 +15,7 @@ Saving and Sharing Palettes: User-created color palettes can be saved and shared
 
 # Setup Instructions:
 I deployed the application to vercel, you can see it by clicking [here](https://nfactorial-task2.vercel.app/).
+
 To run it locally, just clone the repository and open the index.html file.
 
 
