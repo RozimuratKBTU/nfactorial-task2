@@ -5,9 +5,9 @@ Color Palette Explorer is a web application that helps users explore and create 
 
 
 # Main functions:
-Color Picker: Users can choose colors from a color picker or use predefined color palettes.
+## Color Picker: Users can choose colors from a color picker or use predefined color palettes.
 
-Customize Color Properties: Users can adjust the hue, saturation, and brightness of each color in the selected palette.
+### Customize Color Properties: Users can adjust the hue, saturation, and brightness of each color in the selected palette.
 
 Create additional schemes: Users can create additional or similar color schemes based on the selected base color.
 
