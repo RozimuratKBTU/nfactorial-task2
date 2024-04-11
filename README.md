@@ -33,6 +33,8 @@ Color Palette Explorer is a web application that helps users explore and create 
     3. Right click on index.html
     4. Click on run on live server
 
+## Bugs
+The sizes of interface elements (blocks and input fields) may change unexpectedly and be non-responsive on different devices and in different browsers.
 
 
 
