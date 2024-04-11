@@ -1,4 +1,4 @@
 # nfactorial-task2
 color-palette
 
-Rozimurat
+# Rozimurat
