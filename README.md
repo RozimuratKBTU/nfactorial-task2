@@ -1,3 +1,3 @@
 # nfactorial-task2
-color-palette
+color-palette '/n'
 Rozimurat
