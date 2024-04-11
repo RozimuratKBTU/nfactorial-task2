@@ -29,7 +29,7 @@ Color Palette Explorer is a web application that helps users explore and create 
 
 * Running code locally:
     1. Clone the repository: `git clone https://github.com/RozimuratKBTU/nfactorial-task2.git`
-    2. Navigate to the project directory: `cd color-palette`
+    2. Navigate to the project directory: `cd nfactorial-task2`
     3. Right click on index.html
     4. Click on run on live server
 
