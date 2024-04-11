@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Palette</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+
+
+        #changing-text {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .contact-container {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .contact-container h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-container p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-container a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-container a:hover {
+            color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
@@ -242,12 +284,49 @@
     </div>
 </div>
 
+<!-- Элемент, в котором будет меняться текст -->
+<div id="changing-text" > <img src="img/nfac-logo.png" width="100" height="100">  <h3 >Color Palette Explorer </h3></div>
 
-<h1>Свяжитесь со мной</h1>
-<p>Вы можете отправить мне сообщение через WhatsApp или Telegram:</p>
-<a href="https://wa.me/номер_телефона_в_формате_международного_номера">Отправить сообщение в WhatsApp</a>
-<br>
-<a href="tg://resolve?domain=ваш_юзернейм">Отправить сообщение в Telegram</a>
+<script>
+    // Получаем ссылку на элемент с текстом
+    const changingText = document.getElementById('changing-text');
+
+    // Массив с цветами, которые будут использоваться
+    const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff'];
+
+    // Индекс текущего цвета
+    let currentColorIndex = 0;
+
+    // Функция для смены цвета текста
+    function changeColor() {
+        // Устанавливаем цвет текста из массива цветов
+        changingText.style.color = colors[currentColorIndex];
+
+        // Увеличиваем индекс текущего цвета, чтобы получить следующий цвет в массиве
+        currentColorIndex++;
+
+        // Если текущий индекс превышает количество цветов в массиве, сбрасываем его до 0
+        if (currentColorIndex >= colors.length) {
+            currentColorIndex = 0;
+        }
+    }
+
+    // Вызываем функцию для смены цвета каждую миллисекунду
+    setInterval(changeColor, 100);
+</script>
+
+
+<div class="contact-container">
+    <h1>Свяжитесь со мной</h1>
+    <p>Вы можете отправить мне сообщение через WhatsApp или Telegram:</p>
+    <a href="https://wa.me/77023454947"><img src="img/WhatsApp.svg.png" width="100" height="100" alt="WhatsApp"></a>
+    <br>
+    <a href="https://t.me/r_mirpulatov"><img src="img/telegram-icon.svg" width="100" height="100" alt="Telegram"></a>
+</div>
+
+
+
+
 
 <!--* Font Awesome Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
