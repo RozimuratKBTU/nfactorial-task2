@@ -25,11 +25,13 @@ Color Palette Explorer is a web application that helps users explore and create 
 6. Click the "Library" button to view and load your saved palettes.
 
 ## Installation
+* Deploy to Vercel: Click [here](https://nfactorial-task2.vercel.app/) to view.
 
-1. Clone the repository: `git clone https://github.com/RozimuratKBTU/nfactorial-task2.git`
-2. Navigate to the project directory: `cd color-palette`
-3. Right click on index.html
-4. Click on run on live server
+* Running code locally:
+    1. Clone the repository: `git clone https://github.com/RozimuratKBTU/nfactorial-task2.git`
+    2. Navigate to the project directory: `cd color-palette`
+    3. Right click on index.html
+    4. Click on run on live server
 
 
 
