@@ -26,7 +26,7 @@ Color Palette Explorer is a web application that helps users explore and create 
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/Hallowdread/color-palette.git`
+1. Clone the repository: `git clone `
 2. Navigate to the project directory: `cd color-palette`
 3. Right click on index.html
 4. Click on run on live server
